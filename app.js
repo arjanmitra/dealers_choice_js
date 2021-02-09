@@ -1,10 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const { client, syncAndSeed } = require('./db');
 const app = express();
 
 const mainpage = require('./mainpage');
+const detailspage = require('./detailspage');
 
+syncAndSeed();
 const port = process.env.port || 1337;
 
 app.use(morgan('dev'));
@@ -15,5 +18,20 @@ app.listen(port, () => {
 });
 
 app.get('/', async (req, res, next) => {
-  res.send(mainpage());
+  const result = await client.query(`
+  select * from trips`);
+  const posts = result.rows;
+  res.send(mainpage(posts));
+});
+
+app.get('/trips/:id', async (req, res, next) => {
+  try {
+    id = req.params.id;
+    const result = await client.query(`
+    select * from attractions where tripid = ${id}`);
+    const attraction = result.rows;
+    res.send(detailspage(attraction));
+  } catch (err) {
+    next(err);
+  }
 });
