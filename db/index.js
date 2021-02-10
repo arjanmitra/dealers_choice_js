@@ -26,10 +26,17 @@ const syncAndSeed = async () => {
       comments TEXT NOT NULL
     );
 
-    INSERT INTO trips(title, location, duration, comments) VALUES ('India 2020', 'Northern India', 'Feb 14, 2020 - Feb 29, 2020', 'Visited India and got to see a lot of history!');
-    INSERT INTO trips(title, location, duration, comments) VALUES ('Canada Road Trip 2020', 'Ontario, The Prairies, The Mountains', 'Jun 26, 2020 - July 3, 2020', 'Made a 36 road trip from Toronto, Ontario to Banff, Alberta to see the mountains!');
+    INSERT INTO trips(title, location, duration, comments) VALUES ('Canada West Coast Road Trip 2020', 'Ontario, The Prairies, The Mountains', 'Jun 26, 2020 - July 3, 2020', 'Made a 36 road trip from Toronto, Ontario to Banff, Alberta to see the mountains!');
 
-    INSERT INTO attractions(tripid, name, picture, comments) VALUES (1, 'Red Fort', '/public/mountain.JPG', 'Visited the Red Fort!');
+    INSERT INTO trips(title, location, duration, comments) VALUES ('India 2020', 'Northern India', 'Feb 14, 2020 - Feb 29, 2020', 'Visited India and got to see a lot of history!');
+
+    INSERT INTO trips(title, location, duration, comments) VALUES ('Canada East Coast Road Trip 2018', 'Nova Scotia, New Brunswick', 'Oct 1, 2020 - Oct 18, 2020', 'Flew to the East Coast to to feel the Atlantic breeze and eat some delicious lobsters!');
+
+    INSERT INTO trips(title, location, duration, comments) VALUES ('Jamaica 2018', 'Nova Scotia, New Brunswick', 'Oct 1, 2020 - Oct 18, 2020', 'Flew to the East Coast to to feel the Atlantic breeze and eat some delicious lobsters!');
+
+    INSERT INTO attractions(tripid, name, picture, comments) VALUES (1, 'Red Fort', '/public/redfort.JPG', 'Visited the Red Fort!');
+
+    INSERT INTO attractions(tripid, name, picture, comments) VALUES (1, 'Taj Mahal', '/public/tajmahal.JPG', 'Visited the Taj Mahal!');
     `);
   } catch (err) {
     console.log(err);

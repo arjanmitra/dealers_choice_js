@@ -4,8 +4,8 @@ const path = require('path');
 const { client, syncAndSeed } = require('./db');
 const app = express();
 
-const mainpage = require('./mainpage');
-const detailspage = require('./detailspage');
+const mainpage = require('./views/mainpage');
+const detailspage = require('./views/detailspage');
 
 syncAndSeed();
 const port = process.env.port || 1337;
