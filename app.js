@@ -28,7 +28,9 @@ app.get('/trips/:id', async (req, res, next) => {
   try {
     id = req.params.id;
     const result = await client.query(`
-    select * from attractions where tripid = ${id}`);
+    select * from trips inner join
+    attractions on trips.id = attractions.tripid
+    where tripid = ${id}`);
     const attraction = result.rows;
     res.send(detailspage(attraction));
   } catch (err) {

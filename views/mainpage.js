@@ -5,15 +5,20 @@ function mainpage(posts) {
       <link rel="stylesheet" href="/public/styles.css" />
     </head>
     <body>
-      <h1>main page!</h1>
-      <ul>
-        ${posts.map(
+      <h1>Welcome to Arjan's Travel Portal!</h1>
+      <br><br>
+      ${posts
+        .map(
           (post) =>
-            `<li>
-          <a href = './trips/${post.id}'>${post.title}</a> ${post.location}
-          </li>`
-        )}
-      </ul>
+            `<br><br><div>
+        <a href = './trips/${post.id}'>${post.title}</a>
+        <br>
+        <br><br>${post.comments}
+        <br><br>${post.location} | ${post.duration}
+        </div>
+        <br>`
+        )
+        .join(' ')}
     </body>
   </html> `;
 }
