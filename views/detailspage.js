@@ -21,7 +21,7 @@ function detailspage(details) {
           )
           .join(' ')}
       </div>
-      <h2><a href='/'>Back</a>
+      <h2><a href='/trips'>Back</a>
     </body>
   </html> `;
 }

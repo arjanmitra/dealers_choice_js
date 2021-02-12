@@ -75,8 +75,5 @@ const syncAndSeed = async () => {
     console.log(err);
   }
 };
-
-module.exports = {
-  client,
-  syncAndSeed,
-};
+syncAndSeed();
+module.exports = client;
