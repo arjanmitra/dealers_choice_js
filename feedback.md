@@ -11,4 +11,4 @@ For future assignments and projects **please** add a README.md file with instruc
   * commands or files used to seed the database
   * any npm scripts used to start the server or build the project It's good practice for when you work on larger, public projects. Without these instructions, I also have to go through all your files to understand how to set up, which becomes harder and harder as we start to write more code and use more files.
 
-Comments as a Jamaican: The nostalgia! This made me miss Jamaica so much and I would totally die to see sunsets and be on a beach right now !
+Comments as a Jamaican: The nostalgia! This made me miss Jamaica so much and I would totally die to see sunsets and be on a beach right now!
